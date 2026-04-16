@@ -21,14 +21,20 @@ html.scrollbar-gutter-stable {
 
 #scrollbarToggle {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 2rem;
+  right: 2rem;
   padding: 1rem;
   background-color: #ffffff;
   border: 1px solid #000000;
   cursor: pointer;
   z-index: 1000;
   width: 250px;
+}
+
+@media (max-width: 820px) {
+  #scrollbarToggle {
+    top: 155px;
+  }
 }
 
 *,
@@ -57,6 +63,7 @@ html {
   font-size: 100%;
   font-family: 'Ubuntu', sans-serif;
 } /*16px*/
+
 body {
   margin: 0;
   background-color: hsl(197, 58%, 8%);
@@ -64,9 +71,24 @@ body {
   color: #ffffff;
   overflow-x: hidden;
 }
+
 body.mobile-menu-active {
   overflow: hidden;
 }
+
+.title-header {
+  padding: 2rem;
+  width: 80ch;
+  max-width: 100%;
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: #ffffff;
+  }
+}
+
 header {
   height: 200px;
   position: fixed;
@@ -203,26 +225,26 @@ menu li {
   padding: .5rem;
   margin-bottom: 1px;
 }
-a:link {
+main a:link {
   color: black;
   background-color: pink;
   padding: .5rem;
   text-decoration: none;
 }
-a:visited {
+main a:visited {
   background-color: lemonchiffon;
   color: #9700ff;
 }
-a:hover {
+main a:hover {
   color: #ffffff;
   background-color: salmon;
 }
-a:active {
+main a:active {
   background-color: #8dd8ff;
   color: #2142c1;
 }
-a:focus,
-button:focus {
+main a:focus,
+main button:focus {
   /* Technically isn't needed if you don't want focus to show on click but if the framework you are using had disabled it you'll need to add it back.*/
   outline: auto 2px Highlight;
   outline: auto 5px -webkit-focus-ring-color;
